@@ -1,0 +1,278 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 100%;
+    font-family: 'Lato', sans-serif;
+}
+
+/* Header Styles */
+
+.header-container {
+    height: 45vh;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-image: url('img/packs-163497.jpg');
+}
+
+.date__text {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.balance__number {
+    font-size: 2rem;
+    color: white;
+}
+
+.income-container {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    padding: .8rem;
+    border: 1px solid rgba(94, 194, 252, 0.918);
+    background-color: rgba(94, 194, 252, 0.918);
+}
+
+.income__text {
+    flex-basis: 50%;
+}
+
+
+.income__empty-spot {
+    visibility: hidden;
+}
+
+.income__container-inner {
+    display: flex;
+    flex-basis: 50%;
+    justify-content: flex-end;
+}
+
+.expenses-container {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    padding: .8rem;
+    border: 1px solid rgba(247, 60, 60, 0.918);
+    background-color: rgba(247, 60, 60, 0.918);
+}
+
+.expenses__text {
+    flex-basis: 50%;
+}
+
+.expenses-container-inner {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.expenses__percentage {
+    border-radius: 1px;
+    border: 1px solid rgba(241, 30, 30, 0.918) ;
+    background-color: rgba(241, 30, 30, 0.918);
+}
+
+.income__container-inner > *, .expenses-container-inner > * {
+    margin: 0 .3rem;
+    color: white;
+}
+
+/* Form Styles */
+
+form {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;   
+}
+
+form > *:not(:last-child) {
+    margin-right: .5rem;
+}
+
+div > input, div > select {
+    padding: .4rem;
+    border-radius: 3px;
+}
+
+.input__description {
+    flex-basis: 30%;
+}
+
+#input__description-value {
+    width: 100%;
+}
+
+.input__number {
+    flex-basis: 10%;
+}
+
+.input__number-value {
+    width: 30%;
+}
+
+.fa-check-circle {
+    font-size: 1.5rem;
+}
+
+/* List Styles */
+
+.lists-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.income__list , .expenses__list {
+    flex-basis: 45%;
+}
+
+.lists-container > * {
+    margin: 2rem;
+    padding: 1rem;
+}
+
+.income-header {
+    color: green;
+}
+
+.expenses-header {
+    color: lightcoral;
+}
+
+ul {
+    padding: 1rem 0;
+    list-style-type: none;
+}
+
+ul > li  {
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+    padding: 1rem 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    transition: .2s;
+}
+
+li:nth-child(2n) {
+    background-color: rgb(212, 216, 218);
+}
+
+.circle-green {
+    color: green;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 50%;
+    left: 95%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    transition: .2s;
+}
+
+.circle-red {
+    color: red;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 50%;
+    left: 95%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    transition: .2s;
+}
+
+/* Hover Effect Income */
+
+.inputNumberSpanGreen {
+    position: absolute;
+    top: 50%;
+    left: 95%;
+    transform: translate(-50%,-50%);
+    transition: .2s;
+    margin: 0 -1.5rem;
+}
+
+li:hover .circle-green {
+    opacity: 1;
+}
+
+li:hover .inputNumberSpanGreen {
+    left: 85%;
+}
+
+/* Hover Effect Income */
+
+.percentageAlone {
+    position: absolute;
+    top: 50%;
+    left: 95%;
+    transform: translate(-50%,-50%);
+    transition: .2s;
+    margin: 0 -.8rem;
+    padding: 0 .2rem;
+    border: 1px solid rgba(247, 60, 60, 0.918);
+    background-color: #f73c3cea;
+    border-radius: 2px;
+}
+
+.inputNumberSpan {
+    position: absolute;
+    top: 50%;
+    left: 85%;
+    transform: translate(-50%,-50%);
+    transition: .2s;
+    margin: 0 -1.0rem;
+}
+
+li:hover .circle-red {
+    opacity: 1
+}
+
+li:hover .percentageAlone {
+    left: 85%;
+}
+
+li:hover .inputNumberSpan {
+    left: 75%;
+}
+
+/* Toggle between colors */
+
+.fa-check-circle {
+    color: green;
+}
+
+#selection__sign {
+    outline: none;
+}
+
+#input__description-value {
+    outline: none;
+}
+
+#input__number-value {
+    outline: none;
+}
+
+.turnToRed:focus {
+    border: 1.5px solid red !important;
+}
+
+.turnToGreen:focus {
+    border: 1.5px solid green;
+}
+
+.icon-green {
+    color: green;
+}
+
+.icon-red {
+    color: red;
+}

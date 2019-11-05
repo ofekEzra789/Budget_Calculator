@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="BalanceV3.css">
+    <title>Balance</title>
+</head>
+<body>
+
+    <div class="header-container">
+        <div class="date">
+            <p class="date__text"></p>
+        </div>
+
+        <div class="balance">
+            <p class="balance__number">0.00</p>
+        </div>
+
+        <div class="income-container">
+            <p class="income__text">INCOME</p>
+
+            <div class="income__container-inner">
+                <p class="income__number">0.00</p>
+                <p class="income__empty-spot">%</p>
+            </div>
+
+        </div>
+
+        <div class="expenses-container">
+            <p class="expenses__text">EXPENSES</p>
+
+            <div class="expenses-container-inner">
+                <p class="expenses__number">0.00</p>
+                <p class="expenses__percentage">%</p>
+            </div>    
+        </div>
+    </div>
+
+    <div class="form">
+        <form class="form-container">
+
+            <div class="selection">
+                <select  id="selection__sign" class="selection_sign_class">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                </select>
+            </div>
+
+            <div class="input__description">
+                <input type="text" id="input__description-value" name="descriptionValue" placeholder="Add description">
+            </div>
+
+            <div class="input__number">
+                <input type="number" id="input__number-value" name="numberValue" placeholder="Value" min="0">
+            </div>
+
+            <div class="span__check">
+                <span class="span__check-icon"><i class="far fa-check-circle"></i></span>
+            </div>
+
+        </form>
+    </div>
+
+    <div class="lists-container">
+        <div class="income__list">
+            <h3 class="h3-header income-header">INCOME</h3>
+            <ul>
+                
+            </ul>
+        </div>
+
+        <div class="expenses__list">
+            <h3 class="h3-header expenses-header">EXPENSES</h3>
+            <ul>
+                
+            </ul>
+        </div>
+    </div>
+    
+    <script src="http://cdn.date-fns.org/v1.9.0/date_fns.min.js"></script>
+    <script src="BalanceV3.js"></script>
+</body>
+</html>
